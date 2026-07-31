@@ -1,65 +1,53 @@
-$('document').ready(function() {
-	$('#fullpage').fullpage({
-     css3: true,
-                scrollingSpeed: 1000,
-                navigation: true,
-                slidesNavigation: true,
-                controlArrows: false,
-                scrollbars: true,
-                scrollOverflow: true, // even though this is set to true, it's not working
-                
-            });
-	$('#email-button').click(function() {
-		alert("Please check your default outlook application or email: \n con.anastasiou@outlook.com");
+(function () {
+	var root = document.documentElement;
+	var themeToggle = document.getElementById('theme-toggle');
+	var themeIcon = document.getElementById('theme-icon');
+	var navToggle = document.getElementById('nav-toggle');
+	var navLinks = document.getElementById('nav-links');
 
-	})
-	
-	$('.dark_mode_button').click(function() {
-		$('.first_page').toggleClass('first_page_dark_mode');
-		$('.second_page').toggleClass('second_page_dark_mode');
-		$('.third_page').toggleClass('third_page_dark_mode');
-		$('.forth_page').toggleClass('forth_page_dark_mode');
-		$('.projects-container-content').toggleClass('projects-container-content-dark_mode');
-		$('.rule').toggleClass('rule-dark_mode');
-		$('.nav-grid-greating').toggleClass('white');
-		$('.typed-out').toggleClass('white');
-		$('.page_divider').toggle();
-		$('.social-icon').toggleClass('social-icon_dark_mode');
-		$('.nav-item').toggleClass('nav-item_dark_mode');
-		$('.fp-right').toggleClass('white-text');
-		$('.dark-mode-icon-path').toggleClass('dark-mode-icon-path_active');
-		$('#dark-mode-icon-circle').toggleClass('dark-mode-icon-circle_active');
-	})
-	var prevScrollpos = window.pageYOffset;
-			window.onscroll = function() {
-			var currentScrollPos = window.pageYOffset;
-			  if (prevScrollpos > currentScrollPos) {
-			    $('#page-navigator').slideDown( "slow", function() {
-			 // Animation complete.
-			}); 
-			  } else {
-			    $('#page-navigator').slideUp(300);
-			  }
-			  prevScrollpos = currentScrollPos;
-			}
-			$(function () {
-			$('[data-toggle="tooltip"]').tooltip()
-			})
-});
-$('#menu-botton').click(function() {
-		$('.nav-item-link').toggle(200);
-		})
+	function applyTheme(theme) {
+		root.setAttribute('data-theme', theme);
+		themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+		localStorage.setItem('theme', theme);
+	}
 
-$(document).on('click', '#about-button', function(){
-  fullpage_api.moveTo('anchor-second_page', 1);
-});
-$(document).on('click', '#projects-button', function(){
-  fullpage_api.moveTo('anchor-third_page', 1);
-});
-$(document).on('click', '#contact-button', function(){
-  fullpage_api.moveTo('anchor-forth_page', 1);
-});
+	var storedTheme = localStorage.getItem('theme');
+	var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+	applyTheme(storedTheme || (prefersLight ? 'light' : 'dark'));
 
-setTimeout(function(){
-    $.fn.fullpage.reBuild();
-}, 100);
+	themeToggle.addEventListener('click', function () {
+		var current = root.getAttribute('data-theme');
+		applyTheme(current === 'dark' ? 'light' : 'dark');
+	});
+
+	navToggle.addEventListener('click', function () {
+		navLinks.classList.toggle('open');
+	});
+
+	var links = navLinks.querySelectorAll('a');
+	links.forEach(function (link) {
+		link.addEventListener('click', function () {
+			navLinks.classList.remove('open');
+		});
+	});
+
+	if ('IntersectionObserver' in window) {
+		var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+		var linkFor = function (id) {
+			return navLinks.querySelector('a[href="#' + id + '"]');
+		};
+
+		var observer = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				var link = linkFor(entry.target.id);
+				if (!link) { return; }
+				if (entry.isIntersecting) {
+					links.forEach(function (l) { l.classList.remove('active'); });
+					link.classList.add('active');
+				}
+			});
+		}, { rootMargin: '-45% 0px -50% 0px' });
+
+		sections.forEach(function (section) { observer.observe(section); });
+	}
+})();

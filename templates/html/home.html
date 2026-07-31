@@ -1,322 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 	<head>
 		<meta charset="utf-8">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-		{% load static %}
-		<!-- Latest compiled JavaScript -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel='stylesheet' type='text/css' href="{% static 'css/style.css' %}" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"/>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"> </script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="{% static 'js/app.js' %}"> </script>
-		<link rel="stylesheet" type="text/css" href="{% static 'css/fullpage.css' %}" />
-		<script type="text/javascript" src="{% static 'js/fullpage.js' %}"></script>
-		<script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<title>Con Anastasiou — Builder &amp; Automation Enthusiast</title>
+		<meta name="description" content="Con Anastasiou — I enjoy building things and automating the boring parts. Builder of typeflow.cloud, a live typing-speed platform with real-time scoring, competitive leaderboards and a gamified reward system, shipped solo with Python, Django and JavaScript.">
+		{% load static %}
+		<link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.svg' %}">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Con Anastasiou — Builder &amp; Automation Enthusiast">
+		<meta property="og:description" content="Builder of typeflow.cloud, a live typing-speed platform with real-time scoring, competitive leaderboards and a gamified reward system, shipped solo with Python, Django and JavaScript.">
+		<meta name="twitter:card" content="summary">
+		<meta name="theme-color" content="#0b0e14">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 	</head>
 	<body>
-		<script type="text/javascript"></script>
-		<div id='fullpage'>
-		<div class='first_page section' data-anchor="anchor-first_page" id='first_page'>
-			<div class="nav-container">
-				<div id='dark_mode_button' data-toggle="tooltip" data-placement="left" title="Dark Mode"  class='dark_mode_button dark_mode_color'>
-					<svg id='dark-mode-icon' width="512px" height="512px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-						<path class='dark-mode-icon-path' fill="var(--ci-primary-color, currentColor)" d="M368,128H144a128,128,0,0,0,0,256H368a128,128,0,0,0,0-256Zm0,224H144a96,96,0,0,1,0-192H368a96,96,0,0,1,0,192Z" class="ci-primary"/>
-						<path class='dark-mode-icon-path' id='dark-mode-icon-circle' fill="var(--ci-primary-color, currentColor)" d="M368,192a64,64,0,1,0,64,64A64.072,64.072,0,0,0,368,192Zm0,96a32,32,0,1,1,32-32A32.036,32.036,0,0,1,368,288Z" class="ci-primary"/>
-					</svg>
-				</div>
-				<div class='nav-buttons'>
-					<div id='menu-button' >
-						<svg id="menu-icons" width="54px" height="54px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<!-- Uploaded to SVGRepo https://www.svgrepo.com -->
-							<title>ic_fluent_navigation_24_regular</title>
-							<desc>Created with Sketch.</desc>
-							<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-								<g id="ic_fluent_navigation_24_regular" fill="#212121" fill-rule="nonzero">
-									<path d="M2.75254822,18 L21.2525482,18 C21.6667618,18 22.0025482,18.3357864 22.0025482,18.75 C22.0025482,19.1296958 21.7203943,19.443491 21.3543188,19.4931534 L21.2525482,19.5 L2.75254822,19.5 C2.33833466,19.5 2.00254822,19.1642136 2.00254822,18.75 C2.00254822,18.3703042 2.2847021,18.056509 2.65077766,18.0068466 L2.75254822,18 L21.2525482,18 L2.75254822,18 Z M2.75254822,11.5030063 L21.2525482,11.5030063 C21.6667618,11.5030063 22.0025482,11.8387927 22.0025482,12.2530063 C22.0025482,12.6327021 21.7203943,12.9464972 21.3543188,12.9961597 L21.2525482,13.0030063 L2.75254822,13.0030063 C2.33833466,13.0030063 2.00254822,12.6672199 2.00254822,12.2530063 C2.00254822,11.8733105 2.2847021,11.5595153 2.65077766,11.5098529 L2.75254822,11.5030063 L21.2525482,11.5030063 L2.75254822,11.5030063 Z M2.75168905,5.0032392 L21.251689,5.0032392 C21.6659026,5.0032392 22.001689,5.33902564 22.001689,5.7532392 C22.001689,6.13293497 21.7195352,6.44673016 21.3534596,6.49639258 L21.251689,6.5032392 L2.75168905,6.5032392 C2.33747549,6.5032392 2.00168905,6.16745276 2.00168905,5.7532392 C2.00168905,5.37354343 2.28384293,5.05974824 2.64991849,5.01008582 L2.75168905,5.0032392 L21.251689,5.0032392 L2.75168905,5.0032392 Z" id="🎨-Color"></path>
-								</g>
-							</g>
-						</svg>
-					</div>
-					<div id='about-button' class='nav-item nav-item-link'>About</div>
-					<div id='projects-button' class='nav-item nav-item-link'>Projects</div>
-					<div id='contact-button' class='nav-item nav-item-link'>Contact</div>
-				</div>
+		<a href="#main-content" class="skip-link">Skip to content</a>
+		<nav class="nav">
+			<a href="#home" class="nav-brand">Con Anastasiou</a>
+			<div class="nav-links" id="nav-links">
+				<a href="#project">Project</a>
+				<a href="#skills">Skills</a>
+				<a href="#contact">Contact</a>
 			</div>
-			<div class='header'>
-				<div class='header-text'>
-					<div >
-						<h1 class='display-5 nav-grid-greating'>Hey There!<img id='wave' src="{% static 'images/wave.svg' %}" alt=''/></h1>
-						<div class='typed-out h1'>
-							<h1>I'm Con Anastasiou</h1>
-						</div>
-					</div>
-					<br /> 
-				</div>
-				<div>
-					<?xml version="1.0" encoding="utf-8"?>
-					<svg id='person' viewBox="-195.257 -1.494 1019.484 436.681" xmlns="http://www.w3.org/2000/svg">
-						<path d="M314.02808,475.27364a9.75072,9.75072,0,1,0-19.40734,1.28194l-28.01439,36.68607a13.58254,13.58254,0,0,0,1.83575,14.91417l2.19759,2.56354,10.083-2.01667,11.42794-10.08331L290.806,507.19164l14.1167-22.18324-.01825-.01592A9.74283,9.74283,0,0,0,314.02808,475.27364Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#ffb9b9"/>
-						<polygon points="30.041 422.968 25.468 405.984 88.8 380.265 95.549 405.331 30.041 422.968" fill="#ffb8b8" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<path d="M105.002,663.39128,90.2579,608.62916l.69264-.18651a22.07516,22.07516,0,0,1,27.054,15.57522l.00037.00135L127.01,657.46609Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#2f2e41"/>
-						<polygon points="117.278 420.254 103.054 409.91 136.185 350.121 157.179 365.388 117.278 420.254" fill="#ffb8b8" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<path d="M201.1368,668.34061,155.27068,634.9853l.42187-.58015a22.07517,22.07517,0,0,1,30.8348-4.87041l.00114.00082L214.54188,649.908Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#2f2e41"/>
-						<path d="M328.45025,568.36357l-35.795-34.77263a18.07626,18.07626,0,0,0-23.66833-1.3221L201.4006,607.3525l6.05018,9.41084L271.98356,573.069l43.69437,57.13867,41.67764-20.83841Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#2f2e41"/>
-						<path d="M312.98939,575.75807l-26.21673-2.01667-18.986-4.60272a9.75256,9.75256,0,1,0-1.85,12.65572l-.00277.01364,11.42793,4.70553,49.07181,16.80551,6.05-4.70553Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#ffb9b9"/>
-						<polygon points="285.92 416.699 271.131 426.11 253.653 426.11 172.315 395.86 53.332 417.371 49.971 391.826 158.871 344.099 254.326 375.693 285.92 416.699" fill="#2f2e41" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<circle id='contact-page-svg-head' cx="254.32577" cy="227.13245" r="26.21658" fill="#ffb9b9" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<path d="M412.41738,563.46316a150.631,150.631,0,0,1-7.3877,46.59159l-1.96286,6.03657-9.4111,43.0221-10.08328,2.68886-7.39442-9.41107-14.78884-10.7555L350.63366,624.158,341.41082,608.791l-2.87712-4.79967-10.08331-50.41649-38.31653-21.511-12.77217-2.01667,2.68889-7.39442,11.42774-15.46106L302.906,505.8472l3.36111-2.68888,2.68888,1.34443,14.82257,5.71013,48.05688-20.304,7.03142,1.14951L403.06674,511.225A150.49912,150.49912,0,0,1,412.41738,563.46316Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#ccc"/>
-						<polygon points="314.825 325.949 289.281 342.754 251.153 377.131 248.276 372.332 240.209 331.999 242.226 331.999 263.065 293.683 314.825 325.949" opacity="0.1" style="isolation:isolate" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<polygon points="263.065 289.649 242.226 327.965 230.126 341.41 219.371 344.099 248.276 375.693 289.281 338.721 314.825 321.915 263.065 289.649" fill="#ccc" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<path d="M324.19252,439.29866l-2.8405,1.09286a3.96532,3.96532,0,0,1-1.06033-5.50666q.02295-.03393.04661-.06735l-5.24917-.24564a39.63744,39.63744,0,0,1,59.17341-4.76951c.239-.8231,2.84419.7783,3.90783,2.40209.35739-1.33937,2.8001,5.13521,3.66407,9.71188.4-1.52384,1.93791.9362.59056,3.2967.8537-.12472,1.23931,2.05947.57843,3.27633.934-.43878.77654,2.16855-.23609,3.911,1.3327-.11841-.1137,27.33122-20.1137,25.33122-1.39236-6.39749-1-6-2.63957-14.22639-.76312-.81-1.59882-1.54779-2.43315-2.28425l-4.51259-3.9833c-5.2473-4.63182-10.02063-10.34844-17.01093-12.07955-4.80393-1.18968-7.84143-1.45827-5.22344-6.87151-2.36532.98706-4.57411,2.45493-6.96063,3.37169C323.90539,440.90187,324.23894,440.05545,324.19252,439.29866Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#2f2e41"/>
-						<circle cx="267.43406" cy="230.15744" r="4.70554" fill="#ffb9b9" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<rect x="137.51364" y="351.37595" width="21.61009" height="21.61009" transform="matrix(0.066449, -0.99779, 0.99779, 0.066449, -508.431953, 252.951572)" fill="#e6e6e6" style="isolation:isolate"/>
-						<path d="M124.34354,362.13134l26.18282,1.74368-1.74369,26.18282-26.18282-1.74368Zm24.96862,2.80626-23.90605-1.59206-1.59206,23.906,23.90605,1.59206Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#ccc"/>
-						<rect x="241.00867" y="288.77184" width="21.61009" height="21.61009" transform="matrix(0.977685, -0.210075, 0.210075, 0.977685, -342.828893, -173.568835)" fill="#e6e6e6" style="isolation:isolate"/>
-						<path d="M245.27842,276.50957l5.51255,25.65526-25.65526,5.51254-5.51254-25.65526Zm4.15743,24.7795-5.0332-23.42436-23.42437,5.03319,5.03319,23.42438Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#ccc"/>
-						<rect x="226.60299" y="392.67408" width="21.61008" height="21.61009" transform="matrix(0.729839, -0.683619, 0.683619, 0.729839, -497.202095, 38.147511)" fill="#e6e6e6" style="isolation:isolate"/>
-						<path d="M253.81456,385.99664,234.663,403.93538l-17.93873-19.15156,19.15156-17.93872Zm-19.09885,16.3261,17.48621-16.37883-16.37884-17.48618-17.48621,16.37884Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#ccc"/>
-						<path d="M1053.535,231.65939H414.15223a17.59849,17.59849,0,0,0-17.59851,17.59849v356.2522a17.59854,17.59854,0,0,0,17.59851,17.59857H1053.535a17.59856,17.59856,0,0,0,17.59851-17.59857V249.25788a17.59852,17.59852,0,0,0-17.59851-17.59849Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#3f3d56"/>
-						<rect x="329.89003" y="31.10145" width="627.39127" height="353.91303" fill="#fff" id="triangle-2" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<circle cx="643.04942" cy="15.01449" r="6.43477" fill="#fff" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<polygon points="777.858 385.015 329.89 385.015 329.89 31.102 777.858 385.015" fill="#f2f2f2" style="isolation:isolate" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)" id="triangle-1"/>
-						<circle cx="428.05798" cy="298.22423" r="60.3068" fill="#6c63ff" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<path d="M531.74082,575.21a75.01577,75.01577,0,1,1,75.01581-75.01575A75.01578,75.01578,0,0,1,531.74082,575.21Zm0-149.051A74.03519,74.03519,0,1,0,605.776,500.19428a74.03518,74.03518,0,0,0-74.03522-74.03521Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#3f3d56"/>
-						<g id="laptop-text">
-							<rect x="558.18" y="213.475" width="58.605" height="12.246" fill="#3f3d56"/>
-							<rect x="502.734" y="147.133" width="169.497" height="5.248" fill="#3f3d56"/>
-							<rect x="502.734" y="167.752" width="169.497" height="5.248" fill="#3f3d56"/>
-							<rect x="502.734" y="188.371" width="169.497" height="5.248" fill="#3f3d56"/>
-						</g>
-						<rect x="888.40147" y="52.28163" width="24.49176" height="24.49173" fill="#6c63ff" transform="matrix(1, 0, 0, 1, -195.256503, -1.494214)"/>
-						<path d="M1014.52225,319.8039h-29.74v-29.74h29.74Zm-28.4469-1.293h27.15381V291.357H986.07529Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#ccc"/>
-						<path d="M1088.74918,610.23908h-61.22937v-4.41156a.87466.87466,0,0,0-.87463-.87469h-20.993a.87468.87468,0,0,0-.87476.87463v4.41162H991.657v-4.41156a.87468.87468,0,0,0-.8747-.87469H969.7894a.87467.87467,0,0,0-.87469.87469h0v4.41156H955.79416v-4.41156a.87467.87467,0,0,0-.87469-.87469h-20.993a.87468.87468,0,0,0-.8747.87469h0v4.41156H919.93125v-4.41156a.87468.87468,0,0,0-.8747-.87469H898.06363a.87466.87466,0,0,0-.87469.87463v4.41162H884.0684v-4.41156a.87468.87468,0,0,0-.8747-.87469H862.20078a.87467.87467,0,0,0-.87469.87469h0v4.41156H848.20548v-4.41156a.87467.87467,0,0,0-.87469-.87469H826.33787a.87468.87468,0,0,0-.8747.87469h0v4.41156H812.34263v-4.41156a.87468.87468,0,0,0-.8747-.87469H647.02347a.87467.87467,0,0,0-.87469.87469h0v4.41156H633.02817v-4.41156a.87467.87467,0,0,0-.87469-.87469H611.16062a.87468.87468,0,0,0-.8747.87469h0v4.41156h-13.1206v-4.41156a.87466.87466,0,0,0-.87463-.87469h-20.993a.87467.87467,0,0,0-.87469.87469h0v4.41156H561.3024v-4.41156a.87467.87467,0,0,0-.87469-.87469H539.43479a.87468.87468,0,0,0-.8747.87469h0v4.41156H525.43955v-4.41156a.87467.87467,0,0,0-.87469-.87469H503.57194a.87468.87468,0,0,0-.8747.87469h0v4.41156h-13.1206v-4.41156a.87468.87468,0,0,0-.8747-.87469H467.709a.87468.87468,0,0,0-.87469.87463v4.41162H453.71375v-4.41156a.87467.87467,0,0,0-.87466-.87469H431.84617a.8747.8747,0,0,0-.8747.87469h0v4.41156H390.735A20.99292,20.99292,0,0,0,369.74213,631.232v9.4925A20.99291,20.99291,0,0,0,390.735,661.71736h698.01416a20.99293,20.99293,0,0,0,20.99292-20.99286V631.232A20.9929,20.9929,0,0,0,1088.74918,610.23908Z" transform="matrix(1, 0, 0, 1, -285.514409, -233.153614)" fill="#3f3d56"/>
-					</svg>
-				</div>
+			<div class="nav-controls">
+				<button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">
+					<span id="theme-icon">☀️</span>
+				</button>
+				<button id="nav-toggle" class="icon-btn nav-burger" aria-label="Toggle menu">
+					<span></span><span></span><span></span>
+				</button>
 			</div>
-			<div class='social-icons'>
-				<div><a href='https://github.com/inacceptable/'><img class='social-icon' src="{% static 'images/github.svg' %}" alt='' /></a></div>
-				<div><a href="mailto:con.anastasiou@outlook.com"><img class='social-icon' src="{% static 'images/outlook.svg' %}" alt='' /></a></div>
-				<div><a href='https://www.linkedin.com/in/con-anastasiou-512168250/'><img class='social-icon' src="{% static 'images/linkedin.svg' %}" alt='' /></a></div>
-			</div>
-		</div>
-		<div class='page_divider hide'></div>
-		<div data-anchor="anchor-second_page" class='second_page section' id='second_page'>
-			<div class='about-container'>
-				<div>
-					<svg id='about' viewBox="-181.86 -83.637 903.809 509.145" xmlns="http://www.w3.org/2000/svg">
-						<path d="M 79.372 504.099 L 78.42 502.341 C 91.174 495.443 107.046 486.86 115.336 472.773 C 123.509 458.887 123.692 440.031 115.815 423.562 C 109.111 409.547 96.797 396.99 80.204 387.249 C 76.931 385.328 73.495 383.507 70.172 381.746 C 62.141 377.49 53.836 373.088 46.988 366.843 C 37.556 358.242 30.42 343.808 35.739 330.952 C 39.308 322.58 47.329 316.968 56.417 316.485 L 56.529 318.482 C 48.204 318.923 40.855 324.062 37.582 331.73 C 32.639 343.677 39.42 357.235 48.336 365.365 C 54.996 371.439 63.188 375.78 71.109 379.979 C 74.451 381.75 77.906 383.581 81.217 385.525 C 98.155 395.468 110.743 408.322 117.619 422.699 C 125.78 439.759 125.566 459.336 117.06 473.788 C 108.487 488.354 92.344 497.085 79.372 504.099 Z" fill="#f1f1f1" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<ellipse cx="69.092" cy="318.526" rx="17.5" ry="8.5" fill="#f1f1f1" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<ellipse cx="83.092" cy="374.526" rx="17.5" ry="8.5" fill="#f1f1f1" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<ellipse cx="51.092" cy="383.526" rx="17.5" ry="8.5" fill="#f1f1f1" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<ellipse cx="101.092" cy="430.526" rx="17.5" ry="8.5" fill="#f1f1f1" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<ellipse cx="136.092" cy="430.526" rx="17.5" ry="8.5" fill="#f1f1f1" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<rect id="bc1144e2-c94b-4f66-aa77-0b454dfd4174" data-name="Rectangle 62" x="352.384" y="10.638" width="562.796" height="267.056" fill="#e6e6e6" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<rect id="about-page-screen" data-name="Rectangle 75" x="368.477" y="33.539" width="530.61" height="222.814" fill="#fff" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<rect id="a1fdfaec-ef9f-458a-9330-7bb8c38fec43" data-name="Rectangle 80" x="352.144" width="562.796" height="23.909" fill="#33454e" y="-4.791" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<circle id="ac9f2818-2064-46b1-8104-b7d94390836e" data-name="Ellipse 90" cx="369.911" cy="6.268" r="4.431" fill="#fff" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<circle id="bd067119-2054-4d5f-9303-2e8fa40cc410" data-name="Ellipse 91" cx="386.732" cy="6.268" r="4.431" fill="#fff" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<circle id="ee5e9ca0-6fca-449b-8f84-cf683813bd65" data-name="Ellipse 92" cx="403.553" cy="6.268" r="4.431" fill="#fff" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<g id="about-box1" transform="matrix(1, 0, 0, 1, -170.851016, -130.616518)">
-							<path id="acae6c4c-8028-4596-98db-d9926d2ed09f-273" data-name="Path 142" d="M 377.884 98.221 C 376.231 98.221 375.198 100.01 376.025 101.441 C 376.408 102.105 377.117 102.514 377.884 102.514 L 495.688 102.514 C 497.34 102.514 498.373 100.725 497.547 99.294 C 497.163 98.63 496.455 98.221 495.688 98.221 L 377.884 98.221 Z" fill="#e6e6e6" class="about-box1-item"/>
-							<path id="a061bcdc-636b-4d12-a036-d7339f47b36a-274" data-name="Path 143" d="M 377.884 111.103 C 376.231 111.107 375.202 112.898 376.031 114.328 C 376.415 114.988 377.12 115.395 377.884 115.397 L 438.025 115.397 C 439.678 115.393 440.707 113.602 439.877 112.173 C 439.494 111.512 438.789 111.105 438.025 111.103 L 377.884 111.103 Z" fill="#e6e6e6" class="about-box1-item"/>
-						</g>
-						<g id="about-box2" transform="matrix(1, 0, 0, 1, -169.319766, -105.109789)">
-							<path id="e4e4593e-e83d-4128-8cd7-f0323b36c2f2-275" data-name="Path 142" d="M 374.919 173.457 C 373.267 173.457 372.234 175.246 373.06 176.677 C 373.444 177.341 374.152 177.75 374.919 177.75 L 595.802 177.75 C 597.455 177.75 598.488 175.961 597.662 174.53 C 597.278 173.866 596.569 173.457 595.802 173.457 L 374.919 173.457 Z" fill="#e6e6e6" class="about-box2-item"/>
-							<path id="bf45783c-1d79-4b4f-82bb-39fc8a52f7aa-276" data-name="Path 143" d="M 374.919 186.339 C 373.267 186.343 372.238 188.134 373.067 189.563 C 373.45 190.224 374.156 190.631 374.919 190.633 L 538.14 190.633 C 539.792 190.629 540.821 188.838 539.992 187.408 C 539.609 186.748 538.903 186.341 538.14 186.339 L 374.919 186.339 Z" fill="#e6e6e6" class="about-box2-item"/>
-							<path id="b544fc92-6fc6-4255-93fb-dee32d880d89-277" data-name="Path 142" d="M 374.919 198.93 C 373.267 198.934 372.238 200.725 373.067 202.154 C 373.45 202.815 374.156 203.222 374.919 203.224 L 595.802 203.224 C 597.455 203.22 598.484 201.429 597.655 199.999 C 597.271 199.339 596.566 198.932 595.802 198.93 L 374.919 198.93 Z" fill="#e6e6e6" class="about-box2-item"/>
-							<path id="e14bb681-aaa1-4454-9da9-28d0809a146c-278" data-name="Path 143" d="M 374.919 211.813 C 373.267 211.816 372.238 213.607 373.067 215.037 C 373.45 215.697 374.156 216.105 374.919 216.106 L 538.14 216.106 C 539.792 216.103 540.821 214.311 539.992 212.882 C 539.609 212.221 538.903 211.814 538.14 211.813 L 374.919 211.813 Z" fill="#e6e6e6" class="about-box2-item"/>
-						</g>
-						<polygon points="174.808 491.907 187.068 491.906 192.9 444.618 174.806 444.619 174.808 491.907" fill="#a0616a" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<path d="M 171.681 487.904 L 195.825 487.903 L 195.826 487.903 C 204.324 487.903 211.212 494.792 211.213 503.289 L 211.213 503.789 L 171.682 503.791 L 171.681 487.904 Z" fill="#2f2e41" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<polygon points="220.808 491.907 233.068 491.906 238.9 444.618 220.806 444.619 220.808 491.907" fill="#a0616a" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<path d="M 217.681 487.904 L 241.825 487.903 L 241.826 487.903 C 250.324 487.903 257.212 494.792 257.213 503.289 L 257.213 503.789 L 217.682 503.791 L 217.681 487.904 Z" fill="#2f2e41" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<path d="M 137.609 305.049 C 141.882 300.473 140.98 293.148 135.726 289.745 L 144.244 255.04 L 126.752 261.273 L 121.344 293.274 C 117.555 300.072 122.546 308.423 130.328 308.305 C 133.099 308.263 135.731 307.086 137.609 305.049 L 137.609 305.049 Z" fill="#9e616a" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<polygon points="153.739 280.722 170.732 479.787 195.596 477.52 205.547 323.67 214.405 384.588 216.179 481.354 238.679 479.854 251.173 375.754 248.108 274.937 162.691 266.287 153.739 280.722" fill="#2f2e41" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<circle cx="200.485" cy="73.791" r="25.786" fill="#a0616a" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<path d="M 192.319 53.163 C 192.319 53.163 204.352 56.386 210.584 57.675 C 216.816 58.964 216.171 55.311 216.171 55.311 C 216.171 55.311 224.336 56.386 223.907 55.526 C 223.477 54.667 227.345 50.154 222.832 44.997 C 218.32 39.84 219.609 35.972 219.609 35.972 L 215.741 35.972 L 214.667 34.468 L 208.65 34.468 C 208.65 34.468 201.998 28.635 190.179 30.354 C 178.361 32.073 164.384 36.617 163.095 43.708 C 162.92 44.67 162.69 45.738 162.423 46.867 C 159.191 60.511 166.058 73.276 173.179 85.354 C 174.93 88.322 183.396 94.795 183.179 90.354 C 182.963 85.913 175.558 75.94 180.715 75.295 C 185.873 74.651 194.683 61.543 192.319 53.163 Z" fill="#2f2e41" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<path d="M 173.652 108.385 L 219.064 108.385 L 251.173 277.96 C 251.173 277.96 223.18 280.354 207.18 286.354 C 191.18 292.354 164.581 272.648 164.581 272.648 L 173.652 108.385 Z" fill="#33454e" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<path d="M 179.321 127.535 L 179.321 108.385 L 174.18 108.354 L 136.613 132.239 L 144.764 263.102 C 144.764 263.102 154.412 306.76 169.046 306.307 C 183.68 305.854 194.963 150.216 179.321 127.535 Z" fill="#2f2e41" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<path d="M 148.68 135.854 L 136.613 132.239 C 136.613 132.239 127.68 134.854 127.68 143.854 C 127.68 152.854 119.983 280.722 119.983 280.722 L 144.433 282.883 L 149.68 217.854 L 148.68 135.854 Z" fill="#2f2e41" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<path d="M 215.68 120.854 L 213.274 108.385 L 220.18 107.354 L 245.18 117.354 C 245.18 117.354 267.68 281.854 257.68 286.854 C 247.68 291.854 240.928 287.98 240.928 287.98 C 240.928 287.98 208.036 166.654 213.858 150.254 L 215.68 120.854 Z" fill="#2f2e41" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-						<g id="about-page-arm" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)">
-							<g>
-								<path d="M 267.75 302.049 C 263.477 297.473 264.379 290.148 269.633 286.745 L 261.115 252.04 L 278.608 258.273 L 284.015 290.274 C 287.804 297.072 282.813 305.423 275.031 305.305 C 272.26 305.263 269.628 304.086 267.75 302.049 Z" fill="#9e616a"/>
-								<path d="M 227.68 119.854 L 231.946 117.997 C 231.946 117.997 244.469 111.791 251.574 124.323 C 258.68 136.854 283.68 276.854 283.68 276.854 L 263.109 280.722 L 247.731 230.338 L 227.68 119.854 Z" fill="#2f2e41"/>
-							</g>
-						</g>
-						<path d="M 393.372 504.354 L 12.372 504.354 C 11.603 504.354 11.122 503.521 11.506 502.854 C 11.685 502.545 12.015 502.354 12.372 502.354 L 393.372 502.354 C 394.142 502.354 394.623 503.187 394.238 503.854 C 394.06 504.163 393.73 504.354 393.372 504.354 Z" fill="#cacaca" transform="matrix(1, 0, 0, 1, -193.230975, -78.846093)"/>
-					</svg>
-				</div>
-				<div class='about-container-div2'>
-					<p class='lead'>I am a passionate developing full Stack Web Developer who has experience in building Web applications with JavaScript, HTML, CSS, Python, Django Framework, jQuery and other cool libraries and frameworks.</p>
-					<h1 class='display-4'>Work history<img id='work-svg' src="{% static 'images/work.svg' %}" alt='' /></h1>
-					<p class="show-item-about"><b>ICT Services Support Officer / </b> Commonwealth Director of Public Prosecution/ Level 14, 181 William Street, 3000, VIC, AUSTRALIA</p>
-					<p class="show-item-about"><b>Digital Capability Officer / </b> Commonwealth Director of Public Prosecution/ Level 14, 181 William Street, 3000, VIC, AUSTRALIA</p>
-					<h1 class='display-4'>Education<img id='education-svg' src="{% static 'images/education.svg' %}" alt='' /></h1>
-					<p class="show-item-about"><b>St Monica’s College / </b> 16 Davisson Street, Epping VIC 3076</p>
-					<p class="show-item-about"><b>Computer Science / </b> Swinburne University / <i> Completed one year - currently taken a leave of absence</i></p>
-					<p class="show-item-about"><b>Certificate IV Information technology networking / </b> Canberra Institute of technology</i></p>
-					<h1 class='display-4'>Programming experience<img id='mind-svg' src="{% static 'images/mind.svg' %}" alt='' /></h1>
-					<div class='programming-language-container'>
-						<div class='programming-language'>
-							<img  data-toggle="tooltip" data-placement="top" title="Python" src="{% static 'images/languages/python.svg' %}" data-toggle="tooltip" data-placement="top" title="Python" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/html.svg' %}" data-toggle="tooltip" data-placement="top" title="HTML" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/django.svg' %}" data-toggle="tooltip" data-placement="top" title="Django" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/js.svg' %}" data-toggle="tooltip" data-placement="top" title="JavaScript" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/jquery.svg' %}" data-toggle="tooltip" data-placement="top" title="jQuery" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/js.svg' %}" data-toggle="tooltip" data-placement="top" title="Ajax" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/css.svg' %}" data-toggle="tooltip" data-placement="top" title="CSS" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/jinja.svg' %}" data-toggle="tooltip" data-placement="top" title="Jinja" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/vba.svg' %}" data-toggle="tooltip" data-placement="top" title="VBA" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/sql.svg' %}" data-toggle="tooltip" data-placement="top" title="SQL" id='programming-language-image' alt='' /> 
-						</div>
-						<div class='programming-language'>
-							<img src="{% static 'images/languages/php.svg' %}" data-toggle="tooltip" data-placement="top" title="PHP" id='programming-language-image' alt='' /> 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class='page_divider hide'></div>
-		<div data-anchor="anchor-third_page" class='third_page section' id='third_page'>
-			<div class='projects-container'>
-				<div class='projects-container-content center'>
-					<h1 >Web Development Projects</h1>
-					<hr class='rule'/>
-					<div class='project-item-container dragscroll'>
-						<div class='project-item'>
-							<h1>Typing test</h1>
-							<img src="{% static 'images/icons/keyboard.svg' %}" alt="" class='project-item-icon'>
-							<p class='project-item-description'>This app lets test your typing test.</p>
-							<div>
-								<a class='project-item-github' target="_blank" href='https://github.com/inacceptable/typingtest' ><img class='project-item-button' src="{% static 'images/icons/github.svg' %}" alt=''/> </a>
-								<a class='project-item-website' target="_blank" href='https://typingtest.herokuapp.com/'><img class='project-item-button'src="{% static 'images/icons/link.svg' %}" alt=''/></a>
-							</div>
-						</div>
-						<div class='project-item'>
-							<h1>Fileshare app</h1>
-							<img src="{% static 'images/icons/dropbox.svg' %}" alt="" class='project-item-icon'>
-							<p class='project-item-description'>This app lets you upload files and get a unique link to share the file with others.</p>
-							<div>
-								<a class='project-item-github' target="_blank" href='https://github.com/inacceptable/fileshare-app' ><img class='project-item-button' src="{% static 'images/icons/github.svg' %}" alt=''/> </a>
-								<a class='project-item-website' target="_blank" href='http://easyfileshare-app.herokuapp.com/'><img class='project-item-button'src="{% static 'images/icons/link.svg' %}" alt=''/></a>
-							</div>
-						</div>
-						<div class='project-item'>
-							<h1>Dictionary app</h1>
-							<img src="{% static 'images/icons/book.svg' %}" alt="" class='project-item-icon'>
-							<p class='project-item-description'>This app lets you check the definition for any word as well as provide a synonym for the word.</p>
-							<div>
-								<a class='project-item-github' target="_blank" href='https://github.com/inacceptable/dictionary-app'><img class='project-item-button' src="{% static 'images/icons/github.svg' %}" alt=''/> </a>
-								<a class='project-item-website' target="_blank" href='https://cons-dictionary-app.herokuapp.com/'><img class='project-item-button'src="{% static 'images/icons/link.svg' %}" alt=''/></a>
-							</div>
-						</div>
-						<div class='project-item'>
-							<h1>Toolkit app</h1>
-							<img src="{% static 'images/icons/tool.svg' %}" alt="" class='project-item-icon'>
-							<p class='project-item-description'>This app is a collection of python scripts that let complete different tasks.</p>
-							<div>
-								<a class='project-item-github' target="_blank" href='https://github.com/inacceptable/toolkit'><img class='project-item-button' src="{% static 'images/icons/github.svg' %}" alt=''/> </a>
-								<a class='project-item-website' target="_blank" href='https://toolkit-website.herokuapp.com'><img class='project-item-button'src="{% static 'images/icons/link.svg' %}" alt=''/></a>
-							</div>
-						</div>
-						<div class='project-item'>
-							<h1>Weather checker app</h1>
-							<img src="{% static 'images/icons/cloud.svg' %}" alt="" class='project-item-icon'>
-							<p class='project-item-description'>This app lets you check the weather of any location around the world</p>
-							<div>
-								<a class='project-item-github' target="_blank" href='https://github.com/inacceptable/temperature-checker'><img class='project-item-button' src="{% static 'images/icons/github.svg' %}" alt=''/> </a>
-								<a class='project-item-website' target="_blank" href='http://temperature-checker.herokuapp.com'><img class='project-item-button'src="{% static 'images/icons/link.svg' %}" alt=''/></a>
-							</div>
-						</div>
-		
-					</div>
-				</div>
-				<div class='projects-container-graphics'></div>
-			</div>
-		</div>
-		<div class='page_divider hide'></div>
-		<div data-anchor="anchor-forth_page" class='forth_page section' id='forth_page'>
-		<div class='contact-container'>
-		<div class="contact-page-svg-heading-container">
-		<div class=' contact-container1'>
-			<h1 class='h1'>Reach out to me! </h1>
-			<br /> 
-			<h3 class='h3'>Feel free to ask about potential future projects. Or just stop by to say hi!</h3>
-		</div>
-		<div class='contact-container-content'>
-			<div >
-				<a href="mailto:con.anastasiou@outlook.com"> 
-					<?xml version="1.0" encoding="iso-8859-1"?>
-					<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-					<svg id='contact-page-email-svg' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 364.441 364.441" style="enable-background:new 0 0 364.441 364.441;" xml:space="preserve">
-						<g id='contact-page-email-svg-paths'>
-							<path style="fill:#C3C6C8;" d="M356.941,88.637c0-13.75-11.25-25-25-25H32.5c-13.75,0-25,11.25-25,25v187.168
-								c0,13.75,11.25,25,25,25h299.441c13.75,0,25-11.25,25-25V88.637z"/>
-							<path style="fill:#E8E8E8;" d="M182.221,156.933L7.5,268.704v7.1c0,13.75,11.25,25,25,25h299.441c13.75,0,25-11.25,25-25v-7.1
-								L182.221,156.933z"/>
-							<path id='contact-page-email-svg-open' style="fill:#E8E8E8;" d="M182.221,207.509l174.72-111.773v-7.1c0-13.75-11.25-25-25-25H32.5c-13.75,0-25,11.25-25,25v7.1
-								L182.221,207.509z"/>
-							<path style="fill:#005CB9;" d="M355.599,80.595L182.221,191.509L8.843,80.595C7.977,83.123,7.5,85.826,7.5,88.637v7.1
-								l174.721,111.772l174.72-111.773v-7.1C356.941,85.826,356.465,83.123,355.599,80.595z"/>
-							<path style="fill:#071C2C;" d="M331.941,56.137H32.5c-17.92,0-32.5,14.58-32.5,32.5v187.168c0,17.92,14.58,32.5,32.5,32.5h299.441
-								c17.921,0,32.5-14.58,32.5-32.5V88.637C364.441,70.716,349.862,56.137,331.941,56.137z M15,109.438l113.773,72.783L15,255.004
-								V109.438z M349.441,275.805c0,9.649-7.851,17.5-17.5,17.5H32.5c-9.649,0-17.5-7.851-17.5-17.5v-2.994l127.69-81.687l35.488,22.703
-								c1.232,0.788,2.637,1.182,4.042,1.182s2.81-0.394,4.042-1.182l35.487-22.702l127.691,81.686v2.994H349.441z M349.441,255.003
-								L235.668,182.22l113.773-72.783V255.003z M349.441,91.631l-167.22,106.974L15,91.631v-2.994c0-9.649,7.851-17.5,17.5-17.5h299.441
-								c9.649,0,17.5,7.851,17.5,17.5V91.631z"/>
-						</g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-						<g></g>
-					</svg>
-				</a>
-			</div>
-			<div>
-				<a target=”_blank”  href='https://github.com/inacceptable/'> 
-					<svg id='contact-github-svg' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-						<path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 6c-3.313 0-6 2.686-6 6 0 2.651 1.719 4.9 4.104 5.693.3.056.396-.13.396-.289v-1.117c-1.669.363-2.017-.707-2.017-.707-.272-.693-.666-.878-.666-.878-.544-.373.041-.365.041-.365.603.042.92.619.92.619.535.917 1.403.652 1.746.499.054-.388.209-.652.381-.802-1.333-.152-2.733-.667-2.733-2.965 0-.655.234-1.19.618-1.61-.062-.153-.268-.764.058-1.59 0 0 .504-.161 1.65.615.479-.133.992-.199 1.502-.202.51.002 1.023.069 1.503.202 1.146-.776 1.648-.615 1.648-.615.327.826.121 1.437.06 1.588.385.42.617.955.617 1.61 0 2.305-1.404 2.812-2.74 2.96.216.186.412.551.412 1.111v1.646c0 .16.096.347.4.288 2.383-.793 4.1-3.041 4.1-5.691 0-3.314-2.687-6-6-6z"/>
-					</svg>
-				</a>
-			</div>
-		</div>
+		</nav>
 
+		<main id="main-content">
+			<section id="home" class="hero">
+				<div class="hero-inner">
+					<p class="eyebrow">Builder · Automation Enthusiast</p>
+					<h1>Hey, I'm Con Anastasiou <span class="wave">👋</span></h1>
+					<p class="hero-lead">I enjoy building things and automating the boring parts — from full-stack web apps to scripts that save time. My most recent project, <strong>typeflow.cloud</strong>, is a live typing-speed platform I designed, built and shipped solo, with real-time scoring, competitive leaderboards and a gamified reward system.</p>
+					<div class="hero-actions">
+						<a href="https://typeflow.cloud" target="_blank" rel="noopener" class="btn btn-primary">Try typeflow.cloud →</a>
+						<a href="mailto:con.anastasiou@outlook.com" class="btn btn-ghost">Email me</a>
+					</div>
+					<div class="socials">
+						<a href="https://github.com/inacceptable" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+							<img src="{% static 'images/github.svg' %}" alt="GitHub">
+						</a>
+						<a href="mailto:con.anastasiou@outlook.com" aria-label="Email" class="social-icon">
+							<img src="{% static 'images/outlook.svg' %}" alt="Email">
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section id="project" class="section">
+				<div class="section-head">
+					<span class="section-tag">Featured Project</span>
+					<h2>typeflow.cloud</h2>
+					<p class="section-lead">A typing-speed platform I designed, built and shipped solo — real-time scoring, competitive leaderboards and a full gamified reward economy.</p>
+				</div>
+				<div class="project-showcase">
+					<div class="browser-mock">
+						<div class="browser-bar">
+							<span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+							<span class="browser-url">typeflow.cloud</span>
+						</div>
+						<div class="browser-body">
+							<div class="mock-badge">🎯 Today's Challenge — Reach 80 WPM at 88%+ accuracy</div>
+							<div class="mock-stat-row">
+								<div class="mock-stat"><span class="mock-stat-value">91</span><span class="mock-stat-label">WPM</span></div>
+								<div class="mock-stat"><span class="mock-stat-value">96%</span><span class="mock-stat-label">accuracy</span></div>
+							</div>
+							<div class="mock-words">beyond among life hand these cook river name think divide chance attack lost play tall dreams</div>
+							<div class="mock-leaderboard">
+								<div class="mock-lb-title">Leaderboard · 60s mode</div>
+								<div class="mock-lb-row"><span>1</span><span>you</span><span>95.8% acc</span><span>91 WPM</span></div>
+								<div class="mock-lb-row"><span>2</span><span>player2</span><span>90.0% acc</span><span>63 WPM</span></div>
+								<div class="mock-lb-row"><span>3</span><span>player3</span><span>90.9% acc</span><span>40 WPM</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="project-details">
+						<ul class="project-features">
+							<li>Real-time WPM &amp; accuracy engine across Words/Quotes modes with 15/30/60/120s timers</li>
+							<li>Competitive leaderboard system — live, weekly, monthly, all-time and friends rankings</li>
+							<li>Custom gamified economy: earnable currency, unlockable cosmetics, rarity-tiered rewards</li>
+							<li>Daily challenges and streak tracking engineered to drive retention</li>
+							<li>Live stats dashboards (Chart.js) and a real-time community activity feed</li>
+							<li>Built and iterated solo using AI-assisted development to move fast without cutting corners</li>
+						</ul>
+						<div class="stack-pills">
+							<span>Django</span><span>Python</span><span>JavaScript</span><span>Chart.js</span><span>SQL</span>
+						</div>
+						<a href="https://typeflow.cloud" target="_blank" rel="noopener" class="btn btn-primary">Visit typeflow.cloud →</a>
+					</div>
+				</div>
+			</section>
+
+			<section id="skills" class="section">
+				<div class="section-head">
+					<span class="section-tag">Skillset</span>
+					<h2>What I work with</h2>
+				</div>
+				<div class="skills-grid">
+					<div class="skill-group">
+						<h3>AI-Assisted Development</h3>
+						<div class="pill-row">
+							<span>AI Pair-Programming</span>
+							<span>Prompt Engineering</span>
+							<span>Rapid Prototyping with LLMs</span>
+							<span>AI-Driven Debugging &amp; Refactoring</span>
+							<span>Solo Full-Stack Shipping</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h3>Development</h3>
+						<div class="lang-row">
+							<img src="{% static 'images/languages/python.svg' %}" title="Python" alt="Python">
+							<img src="{% static 'images/languages/django.svg' %}" title="Django" alt="Django">
+							<img src="{% static 'images/languages/js.svg' %}" title="JavaScript" alt="JavaScript">
+							<img src="{% static 'images/languages/jquery.svg' %}" title="jQuery" alt="jQuery">
+							<img src="{% static 'images/languages/html.svg' %}" title="HTML" alt="HTML">
+							<img src="{% static 'images/languages/css.svg' %}" title="CSS" alt="CSS">
+							<img src="{% static 'images/languages/sql.svg' %}" title="SQL" alt="SQL">
+							<img src="{% static 'images/languages/php.svg' %}" title="PHP" alt="PHP">
+							<img src="{% static 'images/languages/vba.svg' %}" title="VBA" alt="VBA">
+							<img src="{% static 'images/languages/jinja.svg' %}" title="Jinja" alt="Jinja">
+						</div>
+					</div>
+					<div class="skill-group">
+						<h3>Microsoft 365 &amp; Digital Workplace</h3>
+						<div class="pill-row">
+							<span>Microsoft Teams</span>
+							<span>SharePoint (Classic &amp; Modern)</span>
+							<span>Power Automate</span>
+							<span>Exchange &amp; Outlook Admin</span>
+							<span>Azure AD &amp; Intune</span>
+							<span>ITIL Framework</span>
+							<span>Incident &amp; Change Management</span>
+							<span>O365 Tenant Administration</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="section alt">
+				<div class="contact-card">
+					<h2>Let's talk</h2>
+					<p>Best way to reach me is email — I'll get back to you quickly.</p>
+					<div class="contact-actions">
+						<a href="mailto:con.anastasiou@outlook.com" class="btn btn-primary">con.anastasiou@outlook.com</a>
+						<a href="https://github.com/inacceptable" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<p>© 2026 Con Anastasiou</p>
+		</footer>
+
+		<script src="{% static 'js/app.js' %}"></script>
 	</body>
 </html>
