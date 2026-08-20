@@ -31,6 +31,7 @@
 
 html {
 	scroll-behavior: smooth;
+	background: var(--bg);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -352,6 +353,20 @@ main {
 	align-items: start;
 }
 
+.project-showcase + .project-showcase {
+	margin-top: 70px;
+}
+
+.project-details h3 {
+	font-size: 1.3em;
+	font-weight: 800;
+	margin-bottom: 10px;
+}
+
+.project-details .section-lead {
+	margin-bottom: 20px;
+}
+
 .browser-mock {
 	background: var(--card);
 	border: 1px solid var(--border);
@@ -473,6 +488,24 @@ main {
 }
 
 .mock-lb-row span:last-child {
+	font-weight: 700;
+}
+
+.mock-feature-row {
+	display: grid;
+	grid-template-columns: 20px 1fr;
+	gap: 12px;
+	padding: 8px 0;
+	font-size: 0.85em;
+	border-top: 1px solid var(--border);
+}
+
+.mock-feature-row:first-of-type {
+	border-top: none;
+}
+
+.mock-feature-row span:first-child {
+	color: var(--accent);
 	font-weight: 700;
 }
 
