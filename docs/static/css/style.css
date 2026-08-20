@@ -102,8 +102,6 @@ a {
 	justify-content: space-between;
 	padding: 18px 6%;
 	background: var(--bg);
-	background: color-mix(in srgb, var(--bg) 85%, transparent);
-	backdrop-filter: blur(10px);
 	border-bottom: 1px solid var(--border);
 }
 
@@ -647,7 +645,7 @@ main {
 		flex-direction: column;
 		gap: 0;
 		padding: 10px 6% 20px;
-		transform: translateY(-120%);
+		transform: translateY(calc(-100% - 74px));
 		transition: transform .25s ease;
 	}
 
