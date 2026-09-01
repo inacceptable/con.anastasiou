@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Con Anastasiou</title>
-		<meta name="description" content="Con Anastasiou — builder of typeflow.cloud, a typing-speed test site with real-time scoring, leaderboards and a rewards system, built and shipped solo with Python, Django and JavaScript.">
-		
+		<meta name="description" content="Con Anastasiou — builder of betabud.cloud and typeflow.cloud, full web apps designed, built and shipped solo with Python, Django and JavaScript.">
+
 		<link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Con Anastasiou">
-		<meta property="og:description" content="Builder of typeflow.cloud, a typing-speed test site with real-time scoring, leaderboards and a rewards system, built and shipped solo with Python, Django and JavaScript.">
+		<meta property="og:description" content="Builder of betabud.cloud and typeflow.cloud, full web apps designed, built and shipped solo with Python, Django and JavaScript.">
 		<meta name="twitter:card" content="summary">
 		<meta name="theme-color" content="#0b0e14">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
 		<nav class="nav">
 			<a href="#home" class="nav-brand">Con Anastasiou</a>
 			<div class="nav-links" id="nav-links">
-				<a href="#project">Project</a>
+				<a href="#project">Projects</a>
 				<a href="#skills">Skills</a>
 				<a href="#contact">Contact</a>
 			</div>
@@ -40,9 +40,10 @@
 			<section id="home" class="hero">
 				<div class="hero-inner">
 					<h1>Hi, I'm Con Anastasiou <span class="wave">👋</span></h1>
-					<p class="hero-lead">I build things — scripts, tools, and full web apps — and I like automating anything that takes too long to do by hand. My most recent project is <strong>typeflow.cloud</strong>, a typing-speed test site with real-time scoring, leaderboards and a rewards system, which I designed, built and shipped on my own. I also use AI as part of how I build, to move faster without giving up quality.</p>
+					<p class="hero-lead">I build things — scripts, tools, and full web apps — and I like automating anything that takes too long to do by hand. My most recent project is <strong>betabud.cloud</strong>, a search engine and logbook for Kilter Board climbs; before that I built <strong>typeflow.cloud</strong>, a typing-speed test site with real-time scoring, leaderboards and a rewards system. I design, build and ship these on my own, and I use AI as part of how I build, to move faster without giving up quality.</p>
 					<div class="hero-actions">
-						<a href="https://typeflow.cloud" target="_blank" rel="noopener" class="btn btn-primary">Try typeflow.cloud →</a>
+						<a href="https://betabud.cloud" target="_blank" rel="noopener" class="btn btn-primary">Visit betabud.cloud →</a>
+						<a href="https://typeflow.cloud" target="_blank" rel="noopener" class="btn btn-ghost">typeflow.cloud →</a>
 						<a href="mailto:con.anastasiou@outlook.com" class="btn btn-ghost">Email me</a>
 					</div>
 					<div class="socials">
@@ -60,6 +61,44 @@
 				<div class="section-head">
 					<span class="section-tag">Projects</span>
 					<h2>Things I've built</h2>
+				</div>
+
+				<div class="project-showcase">
+					<div class="browser-mock">
+						<div class="browser-bar">
+							<span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+							<span class="browser-url">betabud.cloud</span>
+						</div>
+						<div class="browser-body">
+							<div class="mock-badge">🧗 47,000+ Kilter Board climbs indexed</div>
+							<div class="mock-stat-row">
+								<div class="mock-stat"><span class="mock-stat-value">3.0★</span><span class="mock-stat-label">avg rating</span></div>
+								<div class="mock-stat"><span class="mock-stat-value">40°</span><span class="mock-stat-label">wall angle</span></div>
+							</div>
+							<div class="mock-leaderboard">
+								<div class="mock-lb-title">Most-climbed · 40°</div>
+								<div class="mock-lb-row"><span>1</span><span>Moon Landing</span><span>6a / V3</span><span>6,712</span></div>
+								<div class="mock-lb-row"><span>2</span><span>Guessing Games</span><span>6b / V4</span><span>5,490</span></div>
+								<div class="mock-lb-row"><span>3</span><span>Half Mast</span><span>6a / V3</span><span>4,885</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="project-details">
+						<h3>betabud.cloud</h3>
+						<p class="section-lead">A search engine and logbook for Kilter Board climbs — browse the full catalogue, preview any climb on a rendered board, then push it to the wall's LEDs over Bluetooth.</p>
+						<ul class="project-features">
+							<li>Full-text search across 47,000+ Kilter Board climbs, filtered by angle, grade range, ascent count, community rating, setter and benchmark "classics"</li>
+							<li>Every climb rendered on a to-scale board — real wall photos where available, an automatic schematic fallback where not — with holds colour-coded by role (start, hand, foot, finish)</li>
+							<li>Sends a climb's hold pattern straight to a physical board's LEDs over Web Bluetooth</li>
+							<li>Personal logbook: log sends per wall angle and collect climbs into custom groups like "Projects" or "Warm-ups"</li>
+							<li>Pulls the shared climb catalogue directly from the Aurora/Kilter backend, with email or Google sign-in</li>
+							<li>Installable PWA with an offline service worker, deployed on Railway with Postgres</li>
+						</ul>
+						<div class="stack-pills">
+							<span>Django</span><span>Python</span><span>JavaScript</span><span>Web Bluetooth</span><span>PostgreSQL</span><span>PWA</span>
+						</div>
+						<a href="https://betabud.cloud" target="_blank" rel="noopener" class="btn btn-primary">Visit betabud.cloud →</a>
+					</div>
 				</div>
 
 				<div class="project-showcase">
