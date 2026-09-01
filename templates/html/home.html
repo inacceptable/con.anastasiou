@@ -42,15 +42,6 @@
 					<p class="eyebrow">Builder · automation · AI-assisted development</p>
 					<h1>Hi, I'm Con Anastasiou <span class="wave">👋</span></h1>
 					<p class="hero-lead">I build things — scripts, tools, and full web apps — and I like automating anything that takes too long to do by hand. I design, build and ship them on my own, and I use AI as part of how I build, to move faster without giving up quality.</p>
-					<div class="hero-actions">
-						<a href="#project" class="btn btn-primary">View projects ↓</a>
-						<a href="mailto:con.anastasiou@outlook.com" class="btn btn-ghost">Email me</a>
-					</div>
-					<p class="hero-featured">Recent builds
-						<a href="https://betabud.cloud" target="_blank" rel="noopener">betabud.cloud</a>
-						<a href="https://typeflow.cloud" target="_blank" rel="noopener">typeflow.cloud</a>
-						<a href="#project">eDiscovery-Lite</a>
-					</p>
 					<div class="socials">
 						<a href="https://github.com/inacceptable" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
 							<img src="{% static 'images/github.svg' %}" alt="GitHub">
@@ -59,6 +50,11 @@
 							<img src="{% static 'images/outlook.svg' %}" alt="Email">
 						</a>
 					</div>
+					<p class="hero-featured">Recent builds
+						<a href="https://betabud.cloud" target="_blank" rel="noopener">betabud.cloud</a>
+						<a href="https://typeflow.cloud" target="_blank" rel="noopener">typeflow.cloud</a>
+						<a href="#project">eDiscovery-Lite</a>
+					</p>
 				</div>
 			</section>
 
@@ -231,13 +227,20 @@
 				</div>
 			</section>
 
-			<section id="contact" class="section alt">
-				<div class="contact-card">
+			<section id="contact" class="section">
+				<div class="contact">
+					<span class="section-tag">Contact</span>
 					<h2>Let's talk</h2>
-					<p>Best way to reach me is email — I'll get back to you quickly.</p>
-					<div class="contact-actions">
-						<a href="mailto:con.anastasiou@outlook.com" class="btn btn-primary">con.anastasiou@outlook.com</a>
-						<a href="https://github.com/inacceptable" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+					<p>The best way to reach me is email, and I'll get back to you quickly.</p>
+					<div class="contact-methods">
+						<a href="mailto:con.anastasiou@outlook.com" class="contact-method">
+							<img src="{% static 'images/outlook.svg' %}" alt="">
+							<span><strong>Email</strong>con.anastasiou@outlook.com</span>
+						</a>
+						<a href="https://github.com/inacceptable" target="_blank" rel="noopener" class="contact-method">
+							<img src="{% static 'images/github.svg' %}" alt="">
+							<span><strong>GitHub</strong>github.com/inacceptable</span>
+						</a>
 					</div>
 				</div>
 			</section>
