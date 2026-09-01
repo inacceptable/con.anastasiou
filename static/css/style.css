@@ -344,6 +344,32 @@ main {
 	transform: translateY(-2px);
 }
 
+.hero-featured {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	margin: 26px 0 34px;
+	font-size: 0.9em;
+	color: var(--text-dim);
+}
+
+.hero-featured a {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	padding: 6px 14px;
+	font-weight: 600;
+	color: var(--text);
+	transition: border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.hero-featured a:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+	transform: translateY(-2px);
+}
+
 /* Featured project */
 .project-showcase {
 	display: grid;
