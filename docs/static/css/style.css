@@ -862,22 +862,20 @@ button:focus-visible {
 /* Responsive ------------------------------------------- */
 
 @media (min-width: 860px) {
-	.tile.tile-lg {
-		grid-column: span 6;
+	.work-bento .tile {
 		display: grid;
-		grid-template-columns: 1.05fr 0.95fr;
-		gap: 36px;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+		gap: 40px;
 		align-items: center;
 		padding: 36px;
 	}
-	.tile.tile-sm { grid-column: span 3; }
 	.skills-bento .tile.s-3 { grid-column: span 3; }
 	.skills-bento .tile.s-2 { grid-column: span 2; }
 	.skills-bento .tile.s-4 { grid-column: span 4; }
 }
 
 @media (max-width: 859px) {
-	.tile.tile-lg .frame { margin-bottom: 24px; }
+	.work-bento .tile .frame { margin-bottom: 24px; }
 }
 
 @media (max-width: 720px) {
