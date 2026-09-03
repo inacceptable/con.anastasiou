@@ -122,6 +122,8 @@ button:focus-visible {
 	padding: 0 24px;
 }
 
+#home, #work, #skills, #contact { scroll-margin-top: 28px; }
+
 .mono {
 	font-family: var(--font-mono);
 	font-size: .72rem;
@@ -206,7 +208,7 @@ button:focus-visible {
 /* Nav ------------------------------------------------------- */
 
 .nav {
-	position: fixed;
+	position: absolute;
 	top: 16px;
 	left: 50%;
 	transform: translateX(-50%);
@@ -890,10 +892,10 @@ button:focus-visible {
 	}
 
 	.nav-links {
-		position: fixed;
-		top: 74px;
-		left: 16px;
-		right: 16px;
+		position: absolute;
+		top: calc(100% + 10px);
+		left: 0;
+		right: 0;
 		flex-direction: column;
 		align-items: stretch;
 		gap: 2px;
