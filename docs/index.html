@@ -11,24 +11,26 @@
 		<meta property="og:title" content="Con Anastasiou">
 		<meta property="og:description" content="Builder of betabud.cloud and typeflow.cloud, full web apps designed, built and shipped solo with Python, Django and JavaScript.">
 		<meta name="twitter:card" content="summary">
-		<meta name="theme-color" content="#0b0e14">
+		<meta name="theme-color" content="#070810">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="static/css/style.css">
 	</head>
 	<body>
 		<a href="#main-content" class="skip-link">Skip to content</a>
+		<div class="grain" aria-hidden="true"></div>
+
 		<nav class="nav">
 			<a href="#home" class="nav-brand">Con Anastasiou</a>
 			<div class="nav-links" id="nav-links">
-				<a href="#project">Projects</a>
+				<a href="#work">Work</a>
 				<a href="#skills">Skills</a>
 				<a href="#contact">Contact</a>
 			</div>
 			<div class="nav-controls">
 				<button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">
-					<span id="theme-icon">☀️</span>
+					<span id="theme-icon">☀</span>
 				</button>
 				<button id="nav-toggle" class="icon-btn nav-burger" aria-label="Toggle menu">
 					<span></span><span></span><span></span>
@@ -37,217 +39,235 @@
 		</nav>
 
 		<main id="main-content">
-			<section id="home" class="hero">
-				<div class="hero-inner">
-					<p class="eyebrow">Builder · automation · AI-assisted development</p>
-					<h1>Hi, I'm Con Anastasiou <span class="wave">👋</span></h1>
-					<p class="hero-lead">I build things — scripts, tools, and full web apps — and I like automating anything that takes too long to do by hand. I design, build and ship them on my own, and I use AI as part of how I build, to move faster without giving up quality.</p>
-					<div class="socials">
-						<a href="https://github.com/inacceptable" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-							<img src="static/images/github.svg" alt="GitHub">
-						</a>
-						<a href="mailto:con.anastasiou@outlook.com" aria-label="Email" class="social-icon">
-							<img src="static/images/outlook.svg" alt="Email">
-						</a>
-					</div>
-					<p class="hero-featured">Recent builds
-						<a href="https://betabud.cloud" target="_blank" rel="noopener">betabud.cloud</a>
-						<a href="https://typeflow.cloud" target="_blank" rel="noopener">typeflow.cloud</a>
-						<a href="#project">eDiscovery-Lite</a>
-					</p>
-				</div>
-			</section>
-
-			<section id="project" class="section">
-				<div class="section-head">
-					<span class="section-tag">Projects</span>
-					<h2>Things I've built</h2>
-				</div>
-
-				<div class="project-showcase">
-					<div class="browser-mock">
-						<div class="browser-bar">
-							<span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-							<span class="browser-url">betabud.cloud</span>
+			<header class="hero" id="home">
+				<div class="hero-glow" aria-hidden="true"></div>
+				<div class="hero-grid" aria-hidden="true"></div>
+				<div class="wrap">
+					<div class="hero-inner">
+						<p class="tag"><span class="dot"></span>Con Anastasiou · solo builder</p>
+						<h1>I build and ship <span class="grad nowrap">full web apps</span>.</h1>
+						<p class="hero-lead">Scripts, tools and complete products — designed, built and shipped on my own. I automate what's slow to do by hand, and use AI to move fast without cutting corners.</p>
+						<div class="hero-meta">
+							<span>3 live products</span>
+							<span>shipped solo</span>
+							<span>Django / Python / JS</span>
 						</div>
-						<div class="browser-body">
-							<div class="mock-badge">🧗 47,000+ Kilter Board climbs indexed</div>
-							<div class="mock-stat-row">
-								<div class="mock-stat"><span class="mock-stat-value">3.0★</span><span class="mock-stat-label">avg rating</span></div>
-								<div class="mock-stat"><span class="mock-stat-value">40°</span><span class="mock-stat-label">wall angle</span></div>
-							</div>
-							<div class="mock-leaderboard">
-								<div class="mock-lb-title">Most-climbed · 40°</div>
-								<div class="mock-lb-row"><span>1</span><span>Moon Landing</span><span>6a / V3</span><span>6,712</span></div>
-								<div class="mock-lb-row"><span>2</span><span>Guessing Games</span><span>6b / V4</span><span>5,490</span></div>
-								<div class="mock-lb-row"><span>3</span><span>Half Mast</span><span>6a / V3</span><span>4,885</span></div>
-							</div>
+						<div class="hero-links">
+							<span class="mono">Live</span>
+							<a href="https://betabud.cloud" target="_blank" rel="noopener" class="chip">betabud.cloud</a>
+							<a href="https://typeflow.cloud" target="_blank" rel="noopener" class="chip">typeflow.cloud</a>
+							<a href="https://ediscoverylite.solutions" target="_blank" rel="noopener" class="chip">eDiscovery-Lite</a>
 						</div>
-					</div>
-					<div class="project-details">
-						<h3>betabud.cloud</h3>
-						<p class="section-lead">A search engine and logbook for Kilter Board climbs — browse the full catalogue, preview any climb on a rendered board, then push it to the wall's LEDs over Bluetooth.</p>
-						<ul class="project-features">
-							<li>Full-text search across 47,000+ Kilter Board climbs, filtered by angle, grade range, ascent count, community rating, setter and benchmark "classics"</li>
-							<li>Every climb rendered on a to-scale board — real wall photos where available, an automatic schematic fallback where not — with holds colour-coded by role (start, hand, foot, finish)</li>
-							<li>Sends a climb's hold pattern straight to a physical board's LEDs over Web Bluetooth</li>
-							<li>Personal logbook: log sends per wall angle and collect climbs into custom groups like "Projects" or "Warm-ups"</li>
-							<li>Pulls the shared climb catalogue directly from the Aurora/Kilter backend, with email or Google sign-in</li>
-							<li>Installable PWA with an offline service worker, deployed on Railway with Postgres</li>
-						</ul>
-						<div class="stack-pills">
-							<span>Django</span><span>Python</span><span>JavaScript</span><span>Web Bluetooth</span><span>PostgreSQL</span><span>PWA</span>
+						<div class="socials">
+							<a href="https://github.com/inacceptable" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+								<img src="static/images/github.svg" alt="GitHub">
+							</a>
+							<a href="mailto:con.anastasiou@outlook.com" aria-label="Email" class="social-icon">
+								<img src="static/images/outlook.svg" alt="Email">
+							</a>
 						</div>
-						<a href="https://betabud.cloud" target="_blank" rel="noopener" class="btn btn-primary">Visit betabud.cloud →</a>
 					</div>
 				</div>
+				<a href="#work" class="scroll-cue">Scroll</a>
+			</header>
 
-				<div class="project-showcase">
-					<div class="browser-mock">
-						<div class="browser-bar">
-							<span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-							<span class="browser-url">typeflow.cloud</span>
-						</div>
-						<div class="browser-body">
-							<div class="mock-badge">🎯 Today's Challenge — Reach 80 WPM at 88%+ accuracy</div>
-							<div class="mock-stat-row">
-								<div class="mock-stat"><span class="mock-stat-value">91</span><span class="mock-stat-label">WPM</span></div>
-								<div class="mock-stat"><span class="mock-stat-value">96%</span><span class="mock-stat-label">accuracy</span></div>
-							</div>
-							<div class="mock-words">beyond among life hand these cook river name think divide chance attack lost play tall dreams</div>
-							<div class="mock-leaderboard">
-								<div class="mock-lb-title">Leaderboard · 60s mode</div>
-								<div class="mock-lb-row"><span>1</span><span>you</span><span>95.8% acc</span><span>91 WPM</span></div>
-								<div class="mock-lb-row"><span>2</span><span>player2</span><span>90.0% acc</span><span>63 WPM</span></div>
-								<div class="mock-lb-row"><span>3</span><span>player3</span><span>90.9% acc</span><span>40 WPM</span></div>
-							</div>
-						</div>
+			<section id="work" class="section">
+				<div class="wrap">
+					<div class="section-head" data-reveal>
+						<span class="mono">01 — Selected work</span>
+						<h2>Three products, live and in use</h2>
+						<p>Each one designed, built and shipped solo — front end, back end, infrastructure and deploy.</p>
 					</div>
-					<div class="project-details">
-						<h3>typeflow.cloud</h3>
-						<p class="section-lead">A typing-speed platform I designed, built and shipped solo — real-time scoring, competitive leaderboards and a full gamified reward economy.</p>
-						<ul class="project-features">
-							<li>Real-time WPM &amp; accuracy engine across Words/Quotes modes with 15/30/60/120s timers</li>
-							<li>Competitive leaderboard system — live, weekly, monthly, all-time and friends rankings</li>
-							<li>Custom gamified economy: earnable currency, unlockable cosmetics, rarity-tiered rewards</li>
-							<li>Daily challenges and streak tracking engineered to drive retention</li>
-							<li>Live stats dashboards (Chart.js) and a real-time community activity feed</li>
-							<li>Built and iterated solo using AI-assisted development to move fast without cutting corners</li>
-						</ul>
-						<div class="stack-pills">
-							<span>Django</span><span>Python</span><span>JavaScript</span><span>Chart.js</span><span>SQL</span>
-						</div>
-						<a href="https://typeflow.cloud" target="_blank" rel="noopener" class="btn btn-primary">Visit typeflow.cloud →</a>
-					</div>
-				</div>
 
-				<div class="project-showcase">
-					<div class="browser-mock">
-						<div class="browser-bar">
-							<span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-							<span class="browser-url">ediscoverylite.solutions</span>
-						</div>
-						<div class="browser-body">
-							<div class="mock-badge">⚖️ v1.0 — production ready</div>
-							<div class="stack-pills">
-								<span>SHA-256 Dedup</span><span>Hash-Chained Audit</span><span>Tamper-Evident</span>
+					<div class="bento">
+						<article class="tile tile-lg" data-reveal>
+							<div class="frame">
+								<div class="frame-bar"><i></i><i></i><i></i><span>betabud.cloud</span></div>
+								<div class="frame-body">
+									<span class="f-badge"><span class="dot"></span>47,000+ climbs indexed</span>
+									<div class="f-list">
+										<span class="f-title">Most-climbed · 40°</span>
+										<div class="f-row"><i>1</i><b>Moon Landing</b><span class="dim">6a / V3</span><span>6,712</span></div>
+										<div class="f-row"><i>2</i><b>Guessing Games</b><span class="dim">6b / V4</span><span>5,490</span></div>
+										<div class="f-row"><i>3</i><b>Half Mast</b><span class="dim">6a / V3</span><span>4,885</span></div>
+									</div>
+								</div>
 							</div>
-							<div class="mock-leaderboard">
-								<div class="mock-lb-title">What's inside</div>
-								<div class="mock-feature-row"><span>1</span><span>Ingest &amp; extract</span></div>
-								<div class="mock-feature-row"><span>2</span><span>Bates &amp; production</span></div>
-								<div class="mock-feature-row"><span>3</span><span>Redaction</span></div>
-								<div class="mock-feature-row"><span>4</span><span>Review &amp; coding</span></div>
-								<div class="mock-feature-row"><span>5</span><span>Full-text search</span></div>
-								<div class="mock-feature-row"><span>6</span><span>Audit &amp; compliance</span></div>
+							<div class="tile-body">
+								<div class="tile-head">
+									<h3>betabud.cloud</h3>
+									<span class="mono">01 / live</span>
+								</div>
+								<p class="tile-lead">A search engine and logbook for Kilter Board climbs — browse the full catalogue, preview any climb on a rendered board, then push it to the wall's LEDs over Bluetooth.</p>
+								<ul class="feats">
+									<li>Full-text search across 47,000+ climbs, filtered by angle, grade, ascents, rating, setter and benchmark "classics"</li>
+									<li>Every climb rendered on a to-scale board, with holds colour-coded by role and real wall photos where available</li>
+									<li>Sends a climb's hold pattern straight to a physical board's LEDs over Web Bluetooth</li>
+									<li>Personal logbook and custom climb groups, installable as an offline PWA</li>
+								</ul>
+								<div class="stack">
+									<span>Django</span><span>Python</span><span>JavaScript</span><span>Web Bluetooth</span><span>PostgreSQL</span><span>PWA</span>
+								</div>
+								<a href="https://betabud.cloud" target="_blank" rel="noopener" class="tile-link">Visit betabud.cloud</a>
 							</div>
-						</div>
-					</div>
-					<div class="project-details">
-						<h3>eDiscovery-Lite</h3>
-						<p class="section-lead">A web app for document review and eDiscovery — ingest, redact, code, produce and audit documents, end to end.</p>
-						<ul class="project-features">
-							<li>Ingest &amp; extract text from PDFs, images and EMLs, with OCR fallback and automatic SHA-256 de-duplication</li>
-							<li>Batch Bates numbering with PDF overlay stamps and load-file import/export</li>
-							<li>Click-and-drag redaction on rendered pages with strict burn-in on export and a full redaction log</li>
-							<li>Review &amp; coding workflow with custom tags and per-reviewer queues</li>
-							<li>Full-text search with filters for custodian, tag, date range, doc type and page count</li>
-							<li>Append-only, hash-chained audit trail with per-document chain of custody</li>
-						</ul>
-						<div class="stack-pills">
-							<span>Django</span><span>Python</span><span>JavaScript</span><span>SQL</span>
-						</div>
-						<a href="https://ediscoverylite.solutions" target="_blank" rel="noopener" class="btn btn-primary">Visit ediscoverylite.solutions →</a>
+						</article>
+
+						<article class="tile tile-sm" data-reveal style="--d:80ms">
+							<div class="frame">
+								<div class="frame-bar"><i></i><i></i><i></i><span>typeflow.cloud</span></div>
+								<div class="frame-body">
+									<div class="f-stats">
+										<span class="f-stat"><b>91</b><span>wpm</span></span>
+										<span class="f-stat"><b>96%</b><span>accuracy</span></span>
+									</div>
+									<div class="f-words">beyond among life hand these cook river name think divide chance attack lost play tall dreams</div>
+									<div class="f-list">
+										<span class="f-title">Leaderboard · 60s</span>
+										<div class="f-row"><i>1</i><b>you</b><span class="dim">95.8%</span><span>91</span></div>
+										<div class="f-row"><i>2</i><b>player2</b><span class="dim">90.0%</span><span>63</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="tile-body">
+								<div class="tile-head">
+									<h3>typeflow.cloud</h3>
+									<span class="mono">02 / live</span>
+								</div>
+								<p class="tile-lead">A typing-speed platform with real-time scoring, competitive leaderboards and a full gamified reward economy.</p>
+								<ul class="feats">
+									<li>Real-time WPM &amp; accuracy engine across Words/Quotes modes and 15–120s timers</li>
+									<li>Live, weekly, monthly, all-time and friends leaderboards</li>
+									<li>Earnable currency, unlockable cosmetics, daily challenges and streaks built for retention</li>
+								</ul>
+								<div class="stack">
+									<span>Django</span><span>Python</span><span>JavaScript</span><span>Chart.js</span><span>SQL</span>
+								</div>
+								<a href="https://typeflow.cloud" target="_blank" rel="noopener" class="tile-link">Visit typeflow.cloud</a>
+							</div>
+						</article>
+
+						<article class="tile tile-sm" data-reveal style="--d:160ms">
+							<div class="frame">
+								<div class="frame-bar"><i></i><i></i><i></i><span>ediscoverylite.solutions</span></div>
+								<div class="frame-body">
+									<span class="f-badge"><span class="dot"></span>v1.0 · production</span>
+									<div class="f-list">
+										<span class="f-title">What's inside</span>
+										<div class="f-row"><i>1</i><b>Ingest &amp; extract</b><span></span><span class="dim">OCR</span></div>
+										<div class="f-row"><i>2</i><b>Bates &amp; production</b><span></span><span class="dim">PDF</span></div>
+										<div class="f-row"><i>3</i><b>Redaction</b><span></span><span class="dim">burn-in</span></div>
+										<div class="f-row"><i>4</i><b>Audit trail</b><span></span><span class="dim">hash-chain</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="tile-body">
+								<div class="tile-head">
+									<h3>eDiscovery-Lite</h3>
+									<span class="mono">03 / live</span>
+								</div>
+								<p class="tile-lead">A document-review and eDiscovery web app — ingest, redact, code, produce and audit documents, end to end.</p>
+								<ul class="feats">
+									<li>Text extraction from PDFs, images and EMLs with OCR fallback and SHA-256 de-duplication</li>
+									<li>Batch Bates numbering, drag-to-redact with strict burn-in on export</li>
+									<li>Append-only, hash-chained audit trail with per-document chain of custody</li>
+								</ul>
+								<div class="stack">
+									<span>Django</span><span>Python</span><span>JavaScript</span><span>SQL</span>
+								</div>
+								<a href="https://ediscoverylite.solutions" target="_blank" rel="noopener" class="tile-link">Visit ediscoverylite.solutions</a>
+							</div>
+						</article>
 					</div>
 				</div>
 			</section>
 
 			<section id="skills" class="section">
-				<div class="section-head">
-					<span class="section-tag">Skillset</span>
-					<h2>What I work with</h2>
-				</div>
-				<div class="skills-grid">
-					<div class="skill-group">
-						<h3>Development</h3>
-						<div class="lang-row">
-							<img src="static/images/languages/python.svg" title="Python" alt="Python">
-							<img src="static/images/languages/django.svg" title="Django" alt="Django">
-							<img src="static/images/languages/js.svg" title="JavaScript" alt="JavaScript">
-							<img src="static/images/languages/jquery.svg" title="jQuery" alt="jQuery">
-							<img src="static/images/languages/html.svg" title="HTML" alt="HTML">
-							<img src="static/images/languages/css.svg" title="CSS" alt="CSS">
-							<img src="static/images/languages/sql.svg" title="SQL" alt="SQL">
-							<img src="static/images/languages/php.svg" title="PHP" alt="PHP">
-							<img src="static/images/languages/vba.svg" title="VBA" alt="VBA">
-							<img src="static/images/languages/jinja.svg" title="Jinja" alt="Jinja">
-						</div>
+				<div class="wrap">
+					<div class="section-head" data-reveal>
+						<span class="mono">02 — Toolkit</span>
+						<h2>What I work with</h2>
+						<p>A working developer stack, plus the automation and Microsoft 365 background from years in IT.</p>
 					</div>
-					<div class="skill-group">
-						<h3>Automation &amp; AI-Assisted Building</h3>
-						<div class="pill-row">
-							<span>VBA Scripting</span>
-							<span>Python Scripting</span>
-							<span>AI-Assisted Coding &amp; Debugging</span>
-						</div>
-					</div>
-					<div class="skill-group">
-						<h3>Microsoft 365 &amp; Digital Workplace</h3>
-						<div class="pill-row">
-							<span>Microsoft Teams</span>
-							<span>SharePoint (Classic &amp; Modern)</span>
-							<span>Power Automate</span>
-							<span>Exchange &amp; Outlook Admin</span>
-							<span>Azure AD &amp; Intune</span>
-							<span>ITIL Framework</span>
-							<span>Incident &amp; Change Management</span>
-							<span>O365 Tenant Administration</span>
-						</div>
+
+					<div class="bento skills-bento">
+						<article class="tile s-3" data-reveal>
+							<p class="tile-tag">Stack</p>
+							<div class="logo-row">
+								<img src="static/images/languages/python.svg" title="Python" alt="Python">
+								<img src="static/images/languages/django.svg" title="Django" alt="Django">
+								<img src="static/images/languages/js.svg" title="JavaScript" alt="JavaScript">
+								<img src="static/images/languages/jquery.svg" title="jQuery" alt="jQuery">
+								<img src="static/images/languages/html.svg" title="HTML" alt="HTML">
+								<img src="static/images/languages/css.svg" title="CSS" alt="CSS">
+								<img src="static/images/languages/sql.svg" title="SQL" alt="SQL">
+								<img src="static/images/languages/php.svg" title="PHP" alt="PHP">
+								<img src="static/images/languages/vba.svg" title="VBA" alt="VBA">
+								<img src="static/images/languages/jinja.svg" title="Jinja" alt="Jinja">
+							</div>
+						</article>
+
+						<article class="tile s-3" data-reveal style="--d:80ms">
+							<p class="tile-tag">Approach</p>
+							<p class="tile-note">I work solo and ship end to end — AI-assisted for the groundwork, hands-on for the parts that decide whether something's actually good. If a task is slow to do by hand, I'd rather script it once.</p>
+						</article>
+
+						<article class="tile s-2" data-reveal>
+							<p class="tile-tag">Automation &amp; AI</p>
+							<div class="taglist">
+								<span>VBA scripting</span>
+								<span>Python scripting</span>
+								<span>AI-assisted coding &amp; debugging</span>
+							</div>
+						</article>
+
+						<article class="tile s-4" data-reveal style="--d:80ms">
+							<p class="tile-tag">Microsoft 365 &amp; digital workplace</p>
+							<div class="taglist">
+								<span>Microsoft Teams</span>
+								<span>SharePoint</span>
+								<span>Power Automate</span>
+								<span>Exchange &amp; Outlook admin</span>
+								<span>Azure AD &amp; Intune</span>
+								<span>ITIL</span>
+								<span>Incident &amp; change management</span>
+								<span>O365 tenant administration</span>
+							</div>
+						</article>
 					</div>
 				</div>
 			</section>
 
 			<section id="contact" class="section">
-				<div class="contact">
-					<span class="section-tag">Contact</span>
-					<h2>Let's talk</h2>
-					<p>The best way to reach me is email, and I'll get back to you quickly.</p>
-					<div class="contact-methods">
-						<a href="mailto:con.anastasiou@outlook.com" class="contact-method">
-							<img src="static/images/outlook.svg" alt="">
-							<span><strong>Email</strong>con.anastasiou@outlook.com</span>
-						</a>
-						<a href="https://github.com/inacceptable" target="_blank" rel="noopener" class="contact-method">
-							<img src="static/images/github.svg" alt="">
-							<span><strong>GitHub</strong>github.com/inacceptable</span>
-						</a>
+				<div class="wrap">
+					<div class="contact-inner" data-reveal>
+						<span class="mono">03 — Contact</span>
+						<h2>Let's build something.</h2>
+						<p>The best way to reach me is email, and I'll get back to you quickly.</p>
+						<div class="contact-methods">
+							<a href="mailto:con.anastasiou@outlook.com" class="contact-method">
+								<img src="static/images/outlook.svg" alt="">
+								<span><strong>Email</strong>con.anastasiou@outlook.com</span>
+							</a>
+							<a href="https://github.com/inacceptable" target="_blank" rel="noopener" class="contact-method">
+								<img src="static/images/github.svg" alt="">
+								<span><strong>GitHub</strong>github.com/inacceptable</span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
 		<footer class="footer">
-			<p>© 2026 Con Anastasiou</p>
+			<div class="wrap">
+				<p>© 2026 Con Anastasiou</p>
+				<nav>
+					<a href="#work">Work</a>
+					<a href="#skills">Skills</a>
+					<a href="#contact">Contact</a>
+				</nav>
+				<p>Built with Django · deployed on GitHub Pages</p>
+			</div>
 		</footer>
 
 		<script src="static/js/app.js"></script>
